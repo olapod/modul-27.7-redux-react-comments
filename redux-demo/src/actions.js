@@ -4,6 +4,8 @@ import uuid from'uuid';
 export const ADD_COMMENT = 'ADD_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
+export const REMOVE_COMMENT ='REMOVE_COMMENT';
+// export const EDIT_COMMENT = 'EDIT_COMMENT'
 
 //kreator akcji
 function addComment(text) {
@@ -15,15 +17,13 @@ function addComment(text) {
     }
 };
 
-// export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
-// function removeComment(id) {
-//     return {
-//         type: REMOVE_COMMENT,
-//         id
-//     }
-// }
-// export const EDIT_COMMENT = 'EDIT_COMMENT';
+function removeComment(id) {
+    return {
+        type: REMOVE_COMMENT,
+        id
+    }
+}
 
 // function editComment(text, id) {
 //     return {
@@ -51,4 +51,4 @@ function thumbDownComment(commentId) {
     }
 }
 
-export {addComment, thumbUpComment, thumbDownComment}
+export {addComment, thumbUpComment, thumbDownComment, removeComment}
